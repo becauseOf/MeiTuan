@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/profile_bg"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/profile_bg"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:civ_border_width="1dp"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center_vertical"
+                    app:civ_border_color="@android:color/white"
+                    android:src="@drawable/profile1"/>
+                <!--如果宽度为Match_parent则居中不起作用-->
+
+                <TextView
+                    android:id="@+id/profile_tv_username"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center_vertical"
+                    android:text="吃货123"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:background="@android:color/white"
+                android:id="@+id/profile_lv1"
+                android:layout_below="@+id/profile_bg"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:dividerHeight="0.5dp"
+                android:divider="@drawable/list_divider"
+                android:layout_height="wrap_content"/>
+
+            <ListView
+                android:background="@android:color/white"
+                android:id="@+id/profile_lv2"
+                android:layout_below="@+id/profile_lv1"
+                android:layout_marginTop="15dp"
+                android:dividerHeight="1dp"
+                android:divider="@drawable/list_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_below="@+id/profile_lv2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="登录/注册"
+                android:textSize="18sp"
+                android:layout_margin="20dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/search_bg"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
